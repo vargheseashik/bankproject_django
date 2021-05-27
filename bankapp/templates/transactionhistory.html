@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+{% extends "home.html" %}
+      {% block tmp %}
+<body>
+<h2 style="color:green;">CREDIT TRANSACTIONS </h2>
+<table class="table">
+<tr>
+    <td><b>Date</b></td>
+    <td><b>Amount</b></td>
+    <td><b>Acc.No</b></td>
+    <td><b>Remarks</b></td>
+
+</tr>
+{% for transaction in ctransactions %}
+    <tr>
+<td>{{transaction.date}}</td>
+<td>{{transaction.amount}}</td>
+<td>{{transaction.to_account_number}}</td>
+<td>{{transaction.remarks}}</td>
+    </tr>
+{% endfor %}
+    </table>
+
+
+<h2 style="color:red;" >DEBIT TRANSACTIONS </h2>
+<table class="table">
+<tr>
+    <td><b>Date</b></td>
+    <td><b>Amount</b></td>
+    <td><b>Acc.No</b></td>
+    <td><b>Remarks</b></td>
+
+</tr>
+{% for transaction in dtransactions %}
+<tr>
+<td>{{transaction.date}}</td>
+<td>{{transaction.amount}}</td>
+<td>{{transaction.to_account_number}}</td>
+<td>{{transaction.remarks}}</td>
+</tr>
+
+{% endfor %}
+</table>
+
+
+
+{% endblock %}
+
+
+
+
+
+
+

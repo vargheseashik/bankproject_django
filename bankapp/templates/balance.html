@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% extends "home.html" %}
+      {% block tmp %}
+<br>
+
+<form method="post" action="" enctype="multipart/form-data">
+ <div class="col d-flex justify-content-center">
+      <div class="card bg-light" style="width: 70rem;">
+  <div class="card-body">
+    <h5 class="card-title"><b>AVAILABLE BALANCE</b></h5>
+    <p class="card-text">
+{%csrf_token%}
+    <h3>Your balance is <b style="color:green;"> RS.{{balance}}</b></h3>
+    </p>
+
+  </div>
+</div>
+         </div>
+    </form>
+                    {% endblock %}
